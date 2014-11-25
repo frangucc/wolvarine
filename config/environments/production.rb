@@ -5,7 +5,7 @@ Rails.application.configure do
       :bucket => ENV['S3_BUCKET_NAME'],
       :access_key_id => ENV['AWS_ACCESS_KEY'],
       :secret_access_key => ENV['AWS_SECRET']
-    }
+    },
 
     s3_headers:     { "Cache-Control" => "max-age=31557600" },
     s3_protocol:    "https",

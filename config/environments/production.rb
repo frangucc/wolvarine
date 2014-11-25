@@ -11,6 +11,7 @@ Rails.application.configure do
     s3_protocol:    "https",
     bucket:         ENV["S3_BUCKET"],
 
+    url:           ':s3_domain_url',
     path:          ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
     default_url:   "/:class/:attachment/:id/:style/:basename.:extension",
     default_style: "product"

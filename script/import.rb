@@ -1,7 +1,7 @@
 require 'csv'
 
 fragrance_option = Spree::OptionType.where(name: 'fragrance', presentation: 'Fragrance').first_or_create!
-shipping_category = Spree::ShippingCategory.first
+shipping_category = Spree::ShippingCategory.first || Spree::ShippingCategory.create!(name: 'Default')
 
 CSV.open('products.csv', headers: true).each_with_index do |row, i|
   price = row[2]

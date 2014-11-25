@@ -6,6 +6,14 @@ Rails.application.configure do
       :access_key_id => ENV['AWS_ACCESS_KEY'],
       :secret_access_key => ENV['AWS_SECRET']
     }
+
+    s3_headers:     { "Cache-Control" => "max-age=31557600" },
+    s3_protocol:    "https",
+    bucket:         ENV["S3_BUCKET"],
+
+    path:          ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
+    default_url:   "/:class/:attachment/:id/:style/:basename.:extension",
+    default_style: "product"
   }
   # Settings specified here will take precedence over those in config/application.rb.
 

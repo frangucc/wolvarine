@@ -13,7 +13,6 @@ Rails.application.configure do
 
     url:           ':s3_domain_url',
     path:          ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
-    default_url:   "/:class/:attachment/:id/:style/:basename.:extension",
     default_style: "product"
   }
   # Settings specified here will take precedence over those in config/application.rb.

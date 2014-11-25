@@ -15,7 +15,6 @@ Rails.application.configure do
     path:          ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
     default_style: "product"
   }
-  Spree::Image.attachment_definitions[:attachment][:url] = ':s3_domain_url'
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

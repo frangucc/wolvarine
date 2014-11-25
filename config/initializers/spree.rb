@@ -9,6 +9,7 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+  Spree::Image.attachment_definitions[:attachment][:url] = ':s3_domain_url' if Rails.env.production?
 end
 
 Spree.user_class = "Spree::User"
